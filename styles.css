@@ -4,6 +4,8 @@
 	--color-темно-фіолетовий: #1e1823;
 	--color-оранжевий: #fd9222;
 	--color-білий: #fafafa;
+  --color-white:  #FFFFFF;
+  --color-wrapper:#E2E2E2;
 }
 
 ul {
@@ -12,7 +14,7 @@ ul {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
@@ -26,12 +28,43 @@ img {
   |============================
 */
 
-.section-title{
+body {
+  margin: 0;
+  background-color: var(--color-wrapper);
+}
 
+.section-title{
+margin-left: auto;
+margin-right: auto;
 }
 
 .section-title-orange {
 
+}
+
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width:375px) {
+  .container {
+    width: 375px;
+  }
+}
+  
+@media screen and (min-width:768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /**
@@ -40,17 +73,45 @@ img {
   |============================
 */
 
+.made-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 20px;
+}
+
+.video-and-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.made-wrapper-list {
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.div-in-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 14px;
+}
+
 .made-subtitle {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  line-height: 24px;
-  color: #111111;
+  line-height: 1.33;
+  color: var(--color-чорний);
 }
   
 
 .made-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18;
   list-style-type: none;
 }
 
@@ -63,7 +124,39 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.3;
   letter-spacing: -0.02em;
-  color: #111111;
+  color: var(--color-чорний);
+}
+
+
+
+@media screen and (min-width:375px) {
+  .made-wrap {
+
+}
+  
+
+@media screen and (min-width:768px) {
+  .made-wrap {
+    gap: 50px;
+    padding: 0 77px;
+  }
+
+  .div-in-div {
+    gap: 28px;
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .made-wrapper {
+    padding: 0 32px;
+  }
+
+  .video-and-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
