@@ -99,11 +99,11 @@ body {
 }
 
 .made-image {
- 
+  width: 100%;
 }
 
 .made-recipe-wrapper {
-  width: 335px;
+  width: 100%;
   background: #FFFFFF;
   border-radius: 15px;
 }
@@ -157,7 +157,9 @@ body {
 }
 
 @media screen and (min-width:375px) {
-
+  .made-recipe-wrapper {
+    width: 335px;
+  }
 }
   
 @media screen and (min-width:768px) {
