@@ -4,19 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+  
     <title>Simply chocolate</title>
-  </head>
-  <body>
 
+    <!--Подключение шрифтов-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+
+    <!--Подключение css-->
+<link rel="stylesheet" href="./styles.css" />
+
+</head>
+  <body>
     <!--How it’s made-->
 
-    <section class="made-container container" >
-      <div class="made-wrap">
-        <h2 class="section-title">HOW IT’S <span class="section-title-orang">MADE?</span>
+    <section class="made section">
+      <div class="made-container container">
+        <h2 class="section-title">
+          HOW IT’S <span class="section-title-secondory-color">MADE?</span>
         </h2>
-        <div class="video-and-list">
-          <picture class="made-img">
+        <div class="made-picture-and-recipe">
+          <picture class="made-picture">
             <source
               srcset="
                 ./img/made/descktop-made.jpg    1x,
@@ -37,7 +48,7 @@
               width="600px"
               height="400px"
             />
-        
+
             <source
               srcset="
                 ./img/made/tablet-made.jpg    1x,
@@ -47,7 +58,6 @@
               width="614px"
               height="400px"
               type="image/jpg"
-        
             />
             <source
               srcset="
@@ -59,7 +69,7 @@
               height="400px"
               type="image/webp"
             />
-        
+
             <source
               srcset="
                 ./img/made/mobile-made.jpg    1x,
@@ -80,37 +90,48 @@
               height="500px"
               type="image/webp"
             />
-            <img src="./img/made/mobile-made.jpg" alt="
-            photo of chocolate making">
+            <div class="made-thumb">
+            <img class="made-image"
+              src="./img/made/mobile-made.jpg"
+              alt="photo of chocolate making"
+            />
+          </div>
           </picture>
-          <div class="made-wrapper-list">
-            <div class="div-in-div">
-              <h3 class="made-subtitle">
-                Try our chocolates today and discover the perfect balance of flavor
+          <div class="made-recipe-wrapper">
+            <div class="made-recipe">
+              <h3 class="made-recipe-subtitle">
+                Try our chocolates today and discover the perfect balance of
+                flavor
               </h3>
-              <ul class="made-list list">
-                <li class="made-item item"> Heat the milk in a saucepan without bringing it to a boil. Add sugar
-                  and cocoa powder.</li>
-                <li class="made-item item">
-                  <p class="made-step">
-                    At the same time, prepare a water bath. Melt the butter on it.
+              <ul class="made-recipe-list list">
+                <li class="made-recipe-item item">
+                  <p class="made-recipe-step">
+                    Heat the milk in a saucepan without bringing it to a boil.
+                    Add sugar and cocoa powder.
                   </p>
                 </li>
-                <li class="made-item item">
-                  <p class="made-step">
-                    "Mix" the milk mixture and already liquid butter. Mix thoroughly
-                    with a silicone spatula so that the mass becomes uniform and silky.
+                <li class="made-recipe-item item">
+                  <p class="made-recipe-step">
+                    At the same time, prepare a water bath. Melt the butter on
+                    it.
                   </p>
                 </li>
-                <li class="made-item item">
-                  <p class="made-step">
+                <li class="made-recipe-item item">
+                  <p class="made-recipe-step">
+                    "Mix" the milk mixture and already liquid butter. Mix
+                    thoroughly with a silicone spatula so that the mass becomes
+                    uniform and silky.
+                  </p>
+                </li>
+                <li class="made-recipe-item item">
+                  <p class="made-recipe-step">
                     Heat the mixture over low heat, letting it barely boil.
                   </p>
                 </li>
-                <li class="made-item item">
-                  <p class="made-step">
-                    Pour the chocolate into special containers (can be replaced with ice
-                    molds). Allow to cool and harden.
+                <li class="made-recipe-item item">
+                  <p class="made-recipe-step">
+                    Pour the chocolate into special containers (can be replaced
+                    with ice molds). Allow to cool and harden.
                   </p>
                 </li>
               </ul>
