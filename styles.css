@@ -195,20 +195,19 @@ body {
     width: 335px;
     height: 500px;
   }
-  
+
   .video-clip {
     height: 500px;
   }
-  
+
   .made-picture {
     height: 500px;
   }
-  
+
   .made-recipe-wrapper {
     width: 335px;
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .made-container {
