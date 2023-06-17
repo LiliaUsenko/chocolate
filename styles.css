@@ -49,26 +49,32 @@ body {
 }
 
 .container {
-  width: 100%;  
-  margin-left: auto;
-  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-@media screen and (min-width:375px) {
+@media screen and (min-width: 375px) {
   .container {
-    width: 375px;
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }    
+}
+  
+@media screen and (min-width: 768px) {
+  .container {
+    width: 614px;
+    padding-right: 77px;
+    padding-left: 77px;
   }
 }
   
-@media screen and (min-width:768px) {
-  .container {
-    width: 768px;
-  }
-}
 
 @media screen and (min-width:1200px) {
   .container {
-    width: 1200px;
+    width: 1136px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 
@@ -88,22 +94,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .made-thumb {
   border-radius: 15px;
-  width: 100%;
   overflow: hidden;
+
 }
 
-.made-image {
+
+.video-clip {
   width: 100%;
+  background-image:
+  url(./img/made/mobile-made.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .made-recipe-wrapper {
-  width: 100%;
   background: #FFFFFF;
   border-radius: 15px;
 }
@@ -160,11 +169,25 @@ body {
   .made-recipe-wrapper {
     width: 335px;
   }
+
+  .video-clip {
+   width: 335px;
+   height: 500px;
+   background-image:
+  url(./img/made/tablet-made.jpg);
+  }
 }
   
 @media screen and (min-width:768px) {
   .made-container {
     gap: 50px;
+  }
+
+  .video-clip {
+    width: 614px;
+    height: 400px;
+    background-image:
+    url(./img/made/descktop-made.jpg);
   }
 
   .made-image {
@@ -191,6 +214,10 @@ body {
     width: 600px;
   }
 
+  .video-clip {
+    width: 600px;
+    height: 400px;
+  }
   .made-image {
     width: 600px;
   }
