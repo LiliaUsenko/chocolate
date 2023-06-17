@@ -1,11 +1,10 @@
-
 :root {
-	--color-чорний: #111111;
-	--color-темно-фіолетовий: #1e1823;
-	--color-оранжевий: #fd9222;
-	--color-білий: #fafafa;
-  --color-white:  #FFFFFF;
-  --color-wrapper:#E2E2E2;
+  --color-чорний: #111111;
+  --color-темно-фіолетовий: #1e1823;
+  --color-оранжевий: #fd9222;
+  --color-білий: #fafafa;
+  --color-white: #ffffff;
+  --color-wrapper: #e2e2e2;
 }
 
 ul {
@@ -14,7 +13,13 @@ ul {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -30,22 +35,22 @@ img {
 
 body {
   margin: 0;
-  background-color: #E2E2E2;         /*можно фон задать на секцию*/
+  background-color: #e2e2e2;
 }
 
 .section-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #111111;  
+  color: #111111;
 }
 
 .section-title-secondory-color {
-  color:  #FD9222;
+  color: #fd9222;
 }
 
 .container {
@@ -58,9 +63,9 @@ body {
     width: 335px;
     margin-left: auto;
     margin-right: auto;
-  }    
+  }
 }
-  
+
 @media screen and (min-width: 768px) {
   .container {
     width: 614px;
@@ -68,9 +73,8 @@ body {
     padding-left: 77px;
   }
 }
-  
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1136px;
     padding-right: 32px;
@@ -97,23 +101,44 @@ body {
 }
 
 .made-thumb {
+  position: relative;
+  height: 250px;
   border-radius: 15px;
   overflow: hidden;
-
 }
-
 
 .video-clip {
   width: 100%;
-  background-image:
-  url(./img/made/mobile-made.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 250px;
+}
+
+.made-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+}
+
+.icon-on-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.made-thumb:hover .made-picture {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.made-thumb:hover .icon-on-image {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .made-recipe-wrapper {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 15px;
 }
 
@@ -125,10 +150,10 @@ body {
 }
 
 .made-recipe-subtitle {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.3;
   color: #111111;
 }
 
@@ -145,67 +170,80 @@ body {
 
 .made-recipe-step {
   padding-left: 16px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  color: #111111; 
+  color: #111111;
 }
 
 .made-recipe-step::before {
   position: absolute;
   top: 5px;
   left: 0;
-  content:"";
+  content: "";
   width: 8px;
   height: 8px;
-  background: #4C4C4C;
-  border: 1px solid #ECEDED;
+  background: #4c4c4c;
+  border: 1px solid #eceded;
   border-radius: 50%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-@media screen and (min-width:375px) {
+@media screen and (min-width: 375px) {
+  .made-thumb {
+    width: 335px;
+    height: 500px;
+  }
+  
+  .video-clip {
+    height: 500px;
+  }
+  
+  .made-picture {
+    height: 500px;
+  }
+  
   .made-recipe-wrapper {
     width: 335px;
   }
-
-  .video-clip {
-   width: 335px;
-   height: 500px;
-   background-image:
-  url(./img/made/tablet-made.jpg);
-  }
 }
-  
-@media screen and (min-width:768px) {
+
+
+@media screen and (min-width: 768px) {
   .made-container {
     gap: 50px;
   }
 
-  .video-clip {
+  .made-thumb {
     width: 614px;
     height: 400px;
-    background-image:
-    url(./img/made/descktop-made.jpg);
   }
 
-  .made-image {
-    width: 614px;
+  .video-clip {
     height: 400px;
   }
-  
+
+  .made-picture {
+    height: 400px;
+  }
+
+  .icon-on-image {
+    width: 44px;
+    height: 44px;
+  }
+
   .made-recipe-wrapper {
     width: 614px;
   }
-  
+
   .made-recipe {
     gap: 28px;
     padding: 32px 102px 32px 32px;
   }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .made-picture-and-recipe {
     flex-direction: row;
   }
@@ -214,17 +252,9 @@ body {
     width: 600px;
   }
 
-  .video-clip {
-    width: 600px;
-    height: 400px;
-  }
-  .made-image {
-    width: 600px;
-  }
-
   .made-recipe-wrapper {
     width: 516px;
-  }  
+  }
 
   .made-recipe {
     gap: 28px;
