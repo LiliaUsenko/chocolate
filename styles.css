@@ -46,20 +46,9 @@ body {
   background-color: #e2e2e2;
 }
 
-.section-title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: var(--primary-text-color);
-  margin-bottom: 32px;
-}
 
-.section-title-secondory-color {
-  color: var(--accent-color);
-}
+
+
 
 .container {
   padding-right: 20px;
@@ -88,13 +77,25 @@ body {
   }
 }
 
-/**
-  |============================
-  | How it’s made
-  |============================
-*/
+.made-section {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
 
+.made-section-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  margin-bottom: 32px;
+}
 
+.made-section-title-secondory-color {
+  color: var(--accent-color);
+}
 
 .made-picture-and-recipe {
   display: flex;
@@ -213,7 +214,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .section-title {
+  .made-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .made-section-title {
     font-size: 24px;
     line-height: 1.17;
     margin-bottom: 50px;
