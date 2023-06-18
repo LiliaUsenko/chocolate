@@ -1,10 +1,18 @@
 :root {
-  --color-чорний: #111111;
-  --color-темно-фіолетовий: #1e1823;
-  --color-оранжевий: #fd9222;
-  --color-білий: #fafafa;
-  --color-white: #ffffff;
-  --color-wrapper: #e2e2e2;
+  --main-font-family: "Montserrat", sans-serif;
+  --primary-background-color: #FAFAFA;
+  --background-color-hero: #FCF1E0;
+  --border-color-hero: rgba(255, 255, 255, 0.5);
+  --box-shadow-color: rgba(215, 228, 249, 0.25);
+  --accent-color: #FD9222;
+  --primary-color: #1E1823;
+  --primary-text-color: #111111;
+  --first-color: #FFF;
+  --input-text-color: rgba(64, 64, 64, 0.3);
+  --first-text-color: rgba(255, 255, 255, 0.7);
+  --secondary-text-color: rgba(17, 17, 17, 0.7);
+  --helper-color: rgba(17, 17, 17, 0.1);
+  --border-color: rgba(17, 17, 17, 0.05);
 }
 
 ul {
@@ -39,18 +47,18 @@ body {
 }
 
 .section-title {
-  font-family: "Montserrat";
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--primary-text-color);
+  margin-bottom: 32px;
 }
 
 .section-title-secondory-color {
-  color: #fd9222;
+  color: var(--accent-color);
 }
 
 .container {
@@ -60,7 +68,7 @@ body {
 
 @media screen and (min-width: 375px) {
   .container {
-    width: 335px;
+    width: 375px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -68,17 +76,15 @@ body {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 614px;
-    padding-right: 77px;
-    padding-left: 77px;
+    width: 768px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1136px;
-    padding-right: 32px;
-    padding-left: 32px;
+    width: 1200px;
   }
 }
 
@@ -88,11 +94,7 @@ body {
   |============================
 */
 
-.made-container {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
+
 
 .made-picture-and-recipe {
   display: flex;
@@ -102,14 +104,14 @@ body {
 
 .made-thumb {
   position: relative;
-  height: 250px;
+  height: 500px;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .video-clip {
   width: 100%;
-  height: 250px;
+  height: 500px;
 }
 
 .made-picture {
@@ -117,7 +119,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 250px;
+  height: 500px;
+
 }
 
 .icon-on-image {
@@ -138,7 +141,8 @@ body {
 }
 
 .made-recipe-wrapper {
-  background: #ffffff;
+  padding: 20px 14px;
+  background: var(--first-color);
   border-radius: 15px;
 }
 
@@ -150,11 +154,12 @@ body {
 }
 
 .made-recipe-subtitle {
+  margin-bottom: 20px;
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
-  line-height: 1.3;
-  color: #111111;
+  line-height: 1.33;
+  color:  var(--primary-text-color);
 }
 
 .made-recipe-list {
@@ -170,11 +175,10 @@ body {
 
 .made-recipe-step {
   padding-left: 16px;
-  font-family: "Montserrat";
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.29;
   letter-spacing: -0.02em;
-  color: #111111;
+  color: var(--primary-text-color);
 }
 
 .made-recipe-step::before {
@@ -187,7 +191,6 @@ body {
   background: #4c4c4c;
   border: 1px solid #eceded;
   border-radius: 50%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 375px) {
@@ -210,6 +213,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+ 
   .made-container {
     gap: 50px;
   }
@@ -217,6 +226,8 @@ body {
   .made-thumb {
     width: 614px;
     height: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .video-clip {
@@ -233,12 +244,17 @@ body {
   }
 
   .made-recipe-wrapper {
-    width: 614px;
+    padding: 32px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .made-recipe {
-    gap: 28px;
-    padding: 32px 102px 32px 32px;
+  .made-recipe-wrapper {
+    width: 614px;
+  }
+  
+  .made-recipe-subtitle {
+    margin-bottom: 28px;
   }
 }
 
@@ -252,13 +268,10 @@ body {
   }
 
   .made-recipe-wrapper {
+    padding: 32px 32px 34px 32px;
     width: 516px;
   }
 
-  .made-recipe {
-    gap: 28px;
-    padding: 32px 32px 34px 32px;
-  }
   .made-recipe-list {
     gap: 24px;
   }
