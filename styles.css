@@ -1,13 +1,13 @@
 :root {
   --main-font-family: "Montserrat", sans-serif;
-  --primary-background-color: #FAFAFA;
-  --background-color-hero: #FCF1E0;
+  --primary-background-color: #fafafa;
+  --background-color-hero: #fcf1e0;
   --border-color-hero: rgba(255, 255, 255, 0.5);
   --box-shadow-color: rgba(215, 228, 249, 0.25);
-  --accent-color: #FD9222;
-  --primary-color: #1E1823;
+  --accent-color: #fd9222;
+  --primary-color: #1e1823;
   --primary-text-color: #111111;
-  --first-color: #FFF;
+  --first-color: #fff;
   --input-text-color: rgba(64, 64, 64, 0.3);
   --first-text-color: rgba(255, 255, 255, 0.7);
   --secondary-text-color: rgba(17, 17, 17, 0.7);
@@ -15,6 +15,11 @@
   --border-color: rgba(17, 17, 17, 0.05);
 }
 
+body {
+  margin: 0;
+  font-family: var(--main-font-family);
+  background-color:  #E2E2E2;
+}
 ul {
   list-style: none;
   margin: 0;
@@ -34,21 +39,6 @@ p {
 img {
   display: block;
 }
-
-/**
-  |============================
-  | General
-  |============================
-*/
-
-body {
-  margin: 0;
-  background-color: #e2e2e2;
-}
-
-
-
-
 
 .container {
   padding-right: 20px;
@@ -145,26 +135,17 @@ body {
   border-radius: 15px;
 }
 
-.made-recipe {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 14px;
-}
-
 .made-recipe-subtitle {
   margin-bottom: 20px;
-  font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
-  color:  var(--primary-text-color);
+  color: var(--primary-text-color);
 }
 
 .made-recipe-list {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 18px;
 }
 
@@ -203,7 +184,7 @@ body {
   }
 
   .made-recipe-wrapper {
-    width: 335px;
+    max-width: 335px;
   }
 }
 
@@ -212,13 +193,12 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-
   .made-section-title {
     font-size: 24px;
     line-height: 1.17;
     margin-bottom: 50px;
   }
- 
+
   .made-container {
     gap: 50px;
   }
@@ -240,15 +220,12 @@ body {
   }
 
   .made-recipe-wrapper {
+    max-width: 614px;
     padding: 32px 102px 32px 32px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .made-recipe-wrapper {
-    width: 614px;
-  }
-  
   .made-recipe-subtitle {
     margin-bottom: 28px;
     max-width: 350px;
@@ -256,6 +233,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .made-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
   .made-picture-and-recipe {
     flex-direction: row;
   }
@@ -266,7 +247,7 @@ body {
 
   .made-recipe-wrapper {
     padding: 32px 32px 34px 32px;
-    width: 516px;
+    max-width: 516px;
   }
 
   .made-recipe-list {
